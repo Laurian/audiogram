@@ -63,17 +63,17 @@ You can set both a `backgroundColor` and a `backgroundImage`, in which case the 
 * `pattern` - What waveform shape to draw. Current options are `wave`, `bars`, `roundBars`, `pixel`, `bricks`, and `equalizer` (default: `wave`)
 * `waveTop` - How many pixels from the top edge to start the waveform (default: `0`)
 * `waveBottom` - How many pixels from the top edge to end the waveform (default: same as `height`)
+* `waveLeft` - How many pixels from the left edge to start the waveform (default: `0`)
+* `waveRight` - How many pixels from the right edge to start the waveform (default: same as `width`)
 * `waveColor` - A CSS color, what color the wave should be. The default is black.
+
+Note that if you change `waveLeft` or `waveRight` to something other than full-width, you'll probably want to tweak `samplesPerFrame` too or else things will get pretty squished.
 
 ### Additional options
 
 * `name` - What name to show in the dropdown menu in the editor (the default is the key)
 * `foregroundColor` - A convenience option for setting `waveColor` and `captionColor` to the same thing.
 * `maxDuration` - Maximum duration of an audiogram, in seconds (e.g. set this to `30` to enforce a 30-second time limit). The default is `300` (5 minutes).
-
-### Making changes
-
-After you've edited `settings/themes.json`, you'll want to run either `npm run rebuild` or `npm start` to rebundle the new themes for the editor.
 
 ### A note about fonts
 
